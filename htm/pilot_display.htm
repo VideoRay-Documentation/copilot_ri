@@ -1,0 +1,397 @@
+<h1>6 - Pilot Display Information</h1>
+
+<p>The <b>pilot information display</b> contains the essential navigation information required to operate the ROV with confidence and precision. This display provides the user with the current navigation data for the ROV and a visible indication of the selected flight control method.</p>
+
+<p>The pilot information display comprises many user-friendly elements, including the current navigation information; status indicators; and flight mode and velocity selection.</p>
+
+<h2>6.1 Navigation Information</h2>
+
+<p>This navigation information panel provides the user with the following ROV information: heading (<b>H</b>), depth (<b>D</b>) and altitude(<b>A</b>). This information is normally updated from the navigation system, but if the DP is in standby only the raw ROV information is displayed. No value is displayed if no ROV information is detected.</p>
+
+<center><p><img src="../images/Figure%204%20Navigation%20Information.png"></p>
+<p>Figure 4 - Navigation Information</p>
+</center>
+
+<h2>6.2 Status Indicators</h2>
+
+<p>The status indicators on the pilot information display allow the user to monitor the status of the ROV.</p>
+
+<center><p><img src="../images/Figure%205%20Status%20Indicator.png"></p>
+<p>Figure 5 - Status Indicator</p>
+</center>
+
+<h3>6.2.1 The DP Status Indicator</h3>
+
+<p>This indicator displays the status of the DP system:</p>
+
+<p>The indicator is green when the DP system is running.</p>
+
+<center><p><img src="../images/Figure%206%20DP%20System%20Running.png"></p>
+<p>Figure 6 - DP System Running</p>
+</center>
+
+<p>The indicator is red when the DP system is in standby.</p>
+
+<center><p><img src="../images/Figure%207%20DP%20System%20Standby.png"></p>
+<p>Figure 7 - DP System Standby</p>
+</center>
+
+<p>The DP can go into standby if the ROV is not in working range (i.e. the DVL has no bottom-lock) or some critical error was detected. In this situation VideoRay RI CoPilot changes into MANUAL mode and the pilot has full control.</p>
+
+<center><p><img src="../images/Figure%208%20DP%20Standby%20Display.png" width="660"></p>
+<p>Figure 8 - DP Standby Display</p>
+</center>
+
+<h3>6.2.2 The Position Status Indicator</h3>
+
+<p>This indicator is illuminated when the ROV is within the tolerance range of its target position. The indicator is not displayed when the ROV is not in position.</p>
+
+<center><p><img src="../images/Figure%209%20Position%20Status%20Indicator.png"></p>
+<p>Figure 9 - Position Status Indicator</p>
+</center>
+
+<h3>6.2.3 The Joystick Indicator</h3>
+
+<p>This indicator is displayed when the system receives a command from the joystick. The indicator is not displayed when the joystick is not considered to be in use.</p>
+
+<p>If the joystick movement is within the specified deadband range, the system will not detect the command. For example, a joystick movement of 20% will not be detected by the system if the deadband setting is 30%.</p>
+
+<center><p><img src="../images/Figure%2010%20Joystick%20Indicator.png"></p>
+<p>Figure 10 - Joystick Indicator</p>
+</center>
+
+<h3>6.2.4 The Navigation Status Indicator</h3>
+
+<p>This indicator can have four different displays, depending on the accuracy of navigation system and the ROV's global reference:</p>
+
+<table>
+  <tr>
+    <th>INDICATOR APPEARANCE</th>
+    <th>STATUS</th>
+    </tr>
+  <tr>
+     <td><center><p><img src="../images/Figure%2011%20Navigation%20Indicator.png" width="460"><br/>
+     Figure 11 - Navigation Indicator</p></td>
+    <td>The navigating system is operating correctly, and the global position is accurate.</td>
+    </tr>
+  <tr>
+    <td><center><p><img src="../images/Figure%2012%20Lat-Lon%20Indicator.png"><br/>
+    Figure 12 - Lat/Lon Indicator</p></td>
+    <td>The global position may have a degree of imprecision - but it is still compatible with effective ROV operation.</td>
+    </tr>
+  <tr>
+    <td><center><p><img src="../images/Figure%2013%20Position%20Indicator.png" width="460"><br/>
+    Figure 13 - Position Indicator</p></td>
+    <td>The navigation system is not operating at an adequate level of accuracy and is no longer reliable. Only the MANUAL flight mode is accessible.</td>
+    </tr>
+  <tr>
+    <td><center><p><img src="../images/Figure%2014%20Nav%20Fault%20Indicator.png"><br/>
+    Figure 14 - Nav Fault Indicator</p></td>
+    <td>The navigation system has failed. Only the MANUAL flight mode is accessible.</td>
+    </tr>
+  </table>
+
+<h3>6.2.5 The DVL Lock Indicator</h3>
+
+<p>This indicator informs the user of the failure of the DVL sensor to get an adequate fix on the seabed. When this indicator is illuminated the DP system will lose precision after a short amount of time. The ROV can be flown in MANUAL mode under these circumstances.</p>
+
+<p>When the DVL gets a fix on the seabed, the indicator is not shown and the system will return to normal operation.</p>
+
+<center><p><img src="../images/Figure%2015%20DVL%20Lock%20Indicator.png"></p>
+<p>Figure 15 - DVL Lock Indicator</p>
+</center>
+
+<h3>6.2.6 The Emergency Stop </h3>
+
+<p>If the user is required to force an Emergency Stop, this can be achieved using the VideoRay Cockpit Interface and clicking on the Wireless Icon to disengage RI CoPilot.</p>
+
+<h2>6.3 Flight Modes</h2>
+
+<p>Selecting the flight mode buttons on the pilot information display changes the flight mode and the active button is highlighted with a blue outline.</p>
+
+<center><p><img src="../images/Figure%2016%20Flight%20Modes.png"></p>
+<p>Figure 16 - Flight Modes</p>
+</center>
+
+<p><img src="../../required/images/icon_note.gif"> When the DP is in standby, the only mode enabled is MANUAL and the rest of the buttons are disabled in the pilot interface. 
+
+<h3>6.3.1 HOVER Command</h3>
+
+<p>The ROV maintains position when the "HOVER" button is selected. The HOVER command can be used at any time to interrupt the vehicle's motion and hold the position of the ROV.</p>
+
+<p>The HOVER command provides station-keeping at the touch of a button and is useful for monitoring missions when the ROV must remain in a fixed position for long periods of time.</p>
+
+<p><img src="../../required/images/icon_note.gif"> The selected flight mode defaults to AUTOFLY whenever the "HOVER" button is pressed - except when the AUTOHOVER flight mode is in use.</p>
+
+<h3>6.3.2 Flying in MANUAL Mode</h3>
+
+<p>In MANUAL mode the pilot has full control as if the joystick is directly connected to the   ROV, and the DP system is in standby. The pilot interface displays navigation data and monitors the position of the ROV.</p>
+
+<p><img src="../../required/images/icon_note.gif"> Selecting the "HOVER" button will change the ROV into AUTOFLY mode.
+
+<p>Example:</p>
+
+<ol>
+  <li><p></p>Select the "MANUAL" button.</li>
+  <li><p></p>Fly the ROV manually with the joystick.</li>
+  <li><p></p>The ROV is moving on the navigation chart according to your requests via the joystick movements.</li>
+  </ol>
+
+<p><img src="../../required/images/icon_note.gif"> Clicking in the navigation chart or water column display has no effect; the ROV responds to joystick commands only.
+
+<h3>6.3.3 Flying in AUTOHOVER Mode</h3>
+
+<p>In AUTOHOVER mode the pilot has full control as if the joystick were directly connected to the ROV. This mode provides station-keeping when no control inputs from the joystick are detected.</p>
+
+<p>If the pilot releases the joystick, the DP system takes control and maintains the vehicle's position. The pilot can use the joystick again to regain full control of the ROV.</p>
+
+<p>Example:</p>
+
+<ol>
+  <li><p></p>Select the "AUTOHOVER" button.</li>
+  <li><p></p>Fly the ROV with the joystick.</li>
+  <li><p></p>Release the joystick.</li>
+  <li><p></p>The ROV holds position automatically.</li>
+  <li><p></p>Fly the ROV around again via the joystick.</li>
+  </ol>
+
+<p><img src="../../required/images/icon_note.gif"> Clicking in the navigation chart or water column display has no effect; the ROV responds to joystick commands only.
+
+<h3>6.3.4 Flying in AUTOFLY Mode</h3>
+
+<p>In AUTOFLY mode the DP system is in total control. The ROV can be controlled with both mouse and joystick commands, and when there are no commands the DP system provides station-keeping.</p>
+
+<p>AUTOFLY mode also offers the user a range of additional navigation tools to assist in controlling the ROV. These navigation tools allow the user to plan detailed missions for the ROV with ease and precision.</p>
+
+<center><p><img src="../images/Figure%2017%20Navigation%20Tools.png"></p>
+<p>Figure 17 - Navigation Tools</p>
+</center>
+
+<h4>6.3.4.1 Click & Go Navigation Tool</h4>
+
+<p>Click & Go is the default navigation tool in AUTOFLY mode. The pilot can select a set of coordinates by clicking on the screen using the mouse and the ROV will then fly to those coordinates and go into a stable hover. Alternatively, the ROV can be moved using a joystick input and will decelerate to a stable hover when the joystick is released. This method of station-keeping provides a smoother halting maneuver for the ROV, and is only available in the AUTOFLY flight mode.</p>
+
+<p>Example:</p>
+
+<ol>
+  <li><p></p>Select the "AUTOFLY" button.</li>
+  <li><p></p>Choose a speed (SLOW, MEDIUM or FAST); the ROV will aim to move at the chosen speed. </li>
+  <li><p></p>The depth/altitude of the ROV can be altered at any time using the water column display.</li>
+  </ol>
+
+<center><p><img src="../images/Figure%2018%20AUTOFLY%20Speeds.png"></p>
+<p>Figure 18 - AUTOFLY Speeds</p>
+</center>
+
+<ul>
+  <li><p></p>Mouse Commands</li>
+  <ul>
+    <li><p></p>A right-button mouse click on the navigation chart display will change the heading of the ROV (a new line at the chosen heading will appear).</li>
+    <li><p></p>A left-button mouse click on the navigation chart will select a target destination.</li>
+    <li><p></p>The requested waypoint will appear on the screen represented by a cross.</li>
+    <li><p></p>The ROV will move towards the chosen position.</li>
+    <li><p></p>Once the target has been reached the "IN POSITION" indicator will illuminate and the ROV will maintain position until a new destination is chosen.</li>
+    </ul>
+  <li><p></p>Joystick Commands</li>
+  <ul>
+    <li><p></p>A command from the joystick controls the ROV at a velocity proportional to the chosen speed (SLOW, MEDIUM or FAST).</li>
+    <li><p></p>The green arrow indicates the direction of the pilot's velocity request.</li>
+    <li><p></p>When the joystick is released the ROV will decelerate as quickly as possible until it reaches a resting point, and will then maintain position until the system receives another command.</li>
+    </ul>
+  </ul>
+
+<p><img src="../../required/images/icon_note.gif"> If the ROV takes too long to decelerate to a resting point, the DP system will activate a HOVER command
+
+<h4>6.3.4.2 Survey Plan Tool</h4>
+
+<p>The Survey Plan tool is used to prepare a mission for the ROV by either planning a survey or uploading a saved survey.</p>
+
+<p>The user can specify the coordinates, depth/altitude and wait time for each of the waypoints in the path before the ROV begins its mission. When activated, the ROV will automatically follow the designated path with no further input from the pilot, unless interruption is deemed necessary.</p>
+
+<p>The Survey Plan tool allows the pilot to observe and monitor the ROV instead of negotiating its path manually.</p>
+
+<p>The user can employ two methods to plan a path for the ROV:</p>
+
+<p>Planning a Survey Using the Mouse</p>
+
+<p>The user must indicate the position for each of the waypoints using the mouse.</p>
+
+<ul>
+  <li><p></p>The position must be determined first, with a left-button mouse click; and</li>
+  <li><p></p>The heading is determined automatically.</li>
+  </ul>
+
+<p>The waypoints are assigned an ID number as they are registered on the navigation chart, to remind the user of the order of sequence.</p>
+
+<center><p><img src="../images/Figure%2019%20Path.jpg" width="660"></p>
+<p>Figure 19 - Path</p>
+</center>
+
+<p>Planning a Survey Using the Editor</p>
+
+<p>It is also possible to plan a survey by selecting the "Survey Plan" icon and entering the required data manually for the series of waypoints by selecting the "edit the current path" icon.</p>
+
+<center><p><img src="../images/Figure%2020%20Survey%20Planning.png" width="660"></p>
+<p>Figure 20 - Survey Planning</p>
+</center>
+
+<p>To begin planning a survey using the editor, the user must select the "Insert" button. This will produce a line of data detailing the ROV's current position, which the user can then amend to specify the first waypoint for the ROV's path.</p>
+
+<p>Additional waypoints can then be added by repeating this process.</p>
+
+<p>The user can enter the coordinates for the waypoint in two formats:</p>
+
+<ul>
+  <li><p></p>latitude/longitude (in decimal degrees); or</li>
+  <li><p></p>north/east.</li>
+  </ul>
+
+<p><img src="../../required/images/icon_note.gif"> Latitude and longitude coordinates are always on WGS84 reference datum.</p>
+
+<p>The user also has the option of selecting either depth or altitude mode when specifying the waypoint.</p>
+
+<p>The survey will be loaded and displayed on the navigation chart by selecting the "Ok" button.</p>
+
+<p>Editing a Survey</p>
+
+<p>Whether it was created using the mouse or editor, the user can edit the details of a path by selecting the "Edit the current path" icon at the top of their screen.</p>
+
+<p>The coordinates, depth/altitude, heading and wait time (in seconds) for a waypoint can all be altered by selecting the appropriate field and entering the required data.</p>
+
+<p>It is possible to insert new waypoints within the path by selecting the entry in the table directly after the desired position of the new waypoint, then pressing the "Insert" button. For example, if the user wishes to insert a new waypoint between positions 2 and 3, they should select the entry in the path table with the ID number 3, then select "Insert". This will produce a new entry with coordinates exactly half-way between the waypoints 2 and 3. This data can then be amended according to the particular values of the new waypoint.</p>
+
+<p>It is also possible to delete waypoints by first selecting the appropriate entry in the editor table, and then pressing the "Delete" button.</p>
+
+<p>Alternatively, by holding the control key and pressing Z the user can delete the last waypoint entered.</p>
+
+<p>Running a Survey</p>
+
+<p>To run the mapped survey, the user must select the ">" (play) button. The ROV will then visit each of the waypoints, before moving on to the next. The "??" (pause) button can be used to suspend the journey, and the "?" (stop) button can be used to stop the journey completely. The survey can be removed at any time by selecting the "Clear" button.</p>
+
+<p>It is possible to begin the Survey Plan journey at the last numbered waypoint, and visit the numbered positions in descending order, by selecting the "<<" (backward) button instead of the ">" (play) button.</p>
+
+<p>The "<<" (backward) and ">>" (forward) buttons can be used to skip waypoints.</p>
+
+<p>When the ROV has completed the Survey Plan sequence, the user can select the ">" (play) button again to repeat the journey.</p>
+
+<center><p><img src="../images/Figure%2021%20Running%20a%20Survey.png"></p>
+<p>Figure 21 - Running a Survey</p>
+</center>
+
+<p>Saving a Survey Pan</p>
+
+<p>A survey can be saved at any point by selecting the "Save" icon. The survey file will automatically be saved to the data directory.</p>
+
+<p>Loading a Survey</p>
+
+<p>Saved Surveys can be loaded by selecting the "Load" icon and opening the appropriate file.</p>
+
+<p><img src="../../required/images/icon_note.gif"> Although a path may remain visible if the user selects another cursor tool, the ROV will only follow the path when the Survey Plan tool is selected</p>
+
+<h4>6.3.4.3 Waypoint Navigation Tool</h4>
+
+<p>The Specific Waypoint navigation tool allows the user to manually send the ROV to a specific position using absolute or relative coordinates. Any incorrect data fields will be highlighted in red and the tooltip will indicate what is wrong with the user entry when using the navigation tool.</p>
+
+<center><p><img src="../images/Figure%2022%20Waypoint.png"></p>
+<p>Figure 22 - Waypoint </p>
+</center>
+
+<p>There are three methods of identifying the waypoint:</p>
+
+<ol>
+  <li><p></p>Global - This option allows the user to specify the waypoint by entering the latitude, longitude, depth/altitude and heading coordinates. The user can choose whether to enter depth or altitude coordinates by selecting the appropriate format in the drop-down box. The user also has a choice of formats for entering latitude and longitude: decimal degrees; degrees and decimal minutes; and degrees, minutes and seconds.
+
+<p><img src="../../required/images/icon_note.gif"> Latitude and longitude coordinates are always on WGS84 reference datum.</p></li>
+
+  <li><p></p><Local - This option allows the user to specify the waypoint by entering the north, east, depth/altitude and heading coordinates. The user can choose whether to enter depth or altitude coordinates by selecting the appropriate format in the drop-down box.
+
+  <li><p></p>Relative - This option allows the user to specify the waypoint by entering coordinates relative to the ROV's current position. The waypoint request can be specified using any or all of four fields:
+    </ul>
+      <li><p></p>Forward/Backward (m): A positive figure in this field will make the ROV move forward. A negative figure in this field will make the ROV move backward.</li>
+      <li><p></p>Lateral Left/Right (m): A positive figure in this field will make the ROV move right. A negative figure in this field will make the ROV move left.</li>
+      <li><p></p>Up/Down (m): A positive figure in this field will make the ROV go down. A negative figure in this field will make the ROV go up.</li>
+      <li><p></p>Turn Left/Right (degrees): A positive figure in this field will make the ROV turn right. A negative figure in this field will make the ROV turn left.</li>
+      </ul>
+    </li>
+  </ol>
+
+<center>
+<p><img src="../images/Figure%2023%20Waypoint%20Navigation%20(1).png"></p>
+<p><img src="../images/Figure%2023%20Waypoint%20Navigation%20(2).png"></p>
+<p><img src="../images/Figure%2023%20Waypoint%20Navigation%20(3).png"></p>
+<p>Figure 23 - Waypoint Navigation</p>
+</center>
+
+<p>The user must first select the required method of specifying the waypoint by selecting the appropriate tab at the top of the Waypoint panel.</p>
+
+<p>The user must then enter the precise figures for each field according to the chosen method of determining the waypoint.</p>
+
+<p>By selecting the "Send" button, the command is activated and the ROV is directed to the specified coordinates.</p>
+
+<p><img src="../../required/images/icon_note.gif"> If the user attempts to send the ROV to an invalid coordinate, a dialog box will appear to advise that the waypoint request is impossible.</p>
+
+<h3>6.3.5 Flying in CRUISE Mode</h3>
+
+<p>CRUISE mode is ideal for survey work when the ROV must keep a constant heading and speed irrespective of the currents.</p>
+
+<p>In CRUISE mode the DP system is in total control, and the ROV moves in a straight line at a constant depth/altitude, heading and forward velocity. The joystick or mouse can be used at any time to alter the heading, depth/altitude and velocity of the ROV - without interrupting the CRUISE mode. The pilot may also adjust the position of the ROV to an alternative trajectory parallel to the vehicle's current heading using the joystick or a left-button mouse click.</p>
+
+<p><img src="../../required/images/icon_note.gif"> If the user selects any of the cursor tools except Click & Go while in CRUISE flight mode, the system will automatically default to AUTOFLY mode</p>
+
+<p>Example:</p>
+
+<ol>
+  <li><p></p>Select "CRUISE".</li>
+  <li><p></p>The ROV is now moving forwards at the chosen speed (SLOW, MEDIUM or FAST) and is keeping its depth/altitude and heading.</li>
+  <li><p></p>The depth/altitude of the ROV can be changed at any time using the water column display. </li>
+
+  <ul>
+    <li><p></p>Mouse Commands</li>
+    <ul>
+      <li><p></p>A right-button mouse click on the navigation chart display will change the heading of the ROV (a new line at the chosen heading will appear).</li>
+      <li><p></p>A left-button mouse click on the navigation chart will select a new position for the ROV. (While in this mode, however, a command to adjust the position of the vehicle will only allow the user to direct the ROV to a point that is parallel to the ROV's current heading.)</li>
+      <li><p></p>The requested position will appear on the screen represented by a cross and it will move parallel to the ROV.</li>
+      <li><p></p>The ROV will then be aligned with the chosen position, while maintaining a constant depth/altitude, heading and forward velocity.</li>
+      <li><p></p>The ROV will continue cruising until the user exits "CRUISE" mode or interrupts the flight using the "HOVER" button.</li>
+      </ul>
+
+    <li><p></p>Joystick Commands</li>
+    <ul>
+      <li><p></p>The joystick can be used to adjust the position of the ROV. (While in this mode, however, a command to adjust the position of the vehicle will only allow the user to direct the ROV to a point that is parallel to the ROV's current heading.)</li>
+      <li><p></p>The requested position will appear on the screen represented by a cross and it will move parallel to the ROV.</li>
+      <li><p></p>The ROV will be aligned with the chosen position, while maintaining a constant depth/altitude, heading and forward velocity.</li>
+      <li><p></p>The ROV will continue cruising until the user exits "CRUISE" mode or interrupts the flight using the "HOVER" button.</li>
+      </ul>
+    </ul>
+  </ol>
+
+<h2>6.4 Velocity Controls</h2>
+
+<p>As with the flight mode buttons, the Velocity Control buttons serve to change the ROV velocity and indicate the current setting by highlighting the selected button in cyan.</p>
+
+<center><p><img src="../images/Figure%2024%20Velocity%20Controls.png"></p>
+<p>Figure 24 - Velocity Controls</p>
+</center>
+
+<p>This velocity setting is only available in AUTOFLY and CRUISE modes. Only X (Surge) is controlled by these settings.</p>
+
+<h2>6.5 Alarm Panel</h2>
+
+<p>The alarm panel is displayed across the bottom of the pilot interface. It displays the current status of each software component that allows VideoRay RI CoPilot to run smoothly.</p>
+
+<p>If a software component fails, its name is illuminated in the alarm panel situated along the bottom of the pilot interface.</p>
+
+<p>In normal operation, the bar illustrated below should have no alarms illuminated, and it will remain invisible to the user until any failure occurs.</p>
+
+<center><p><img src="../images/Figure%2025%20Alarm%20Panel.png"></p>
+<p>Figure 25 - Alarm Panel</p>
+</center>
+
+<h2>6.6 Sonar View Range Sliders</h2>
+
+<p>The sonar range sliders (along the immediate left side of the interface) allow you to change both the start and stop range. The Stop Range selects how far out the sonar is looking, whereas the Start Range selects the point where the sonar starts acquiring data. By using both controls you can zoom in on a target. However, note that zooming in too far can create a degraded picture because not enough data is available to fill the screen pixels, resulting in pixilation.</p>
+
+<center><p><img src="../images/Figure%2026%20Sonar%20Range%20Sliders.png"></p>
+<p>Figure 26 - Sonar Range Sliders</p>
+</center>
+
