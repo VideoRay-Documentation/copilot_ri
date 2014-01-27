@@ -1,0 +1,67 @@
+#Document Commands
+!PRODUCT,VideoRay RI CoPilot
+!VERSION,1.00.00
+!DOCTYPE,Operator's Manual
+!OUT_DIR,copilot_ri/
+!VALID_PAGES,
+!VALID_TEXT,c
+!TEMPLATE_COVER,required/htm/template_cover_print.htm,index_print.htm
+
+#Documentation Generation
+!INCLUDE,required/intro_.txt,1
+
+#**,Scope and Purpose
+#**,Targeted Audience
+*,General Overview,,overview.htm,,,
+#**,Requirements
+#**,Dynamic Positioning System
+#**,VideoRay CoPilot Core Features
+#***,Tracking Module
+*,Pilot Interface Overview,,interface_overview.htm,,,
+*,Navigation Chart Display,,nav_chart.htm,,,
+#**,Navigation Chart Zoom Control
+*,Water Column Display,,water_column.htm,,,
+#**,Water Column Zoom Control
+*,Pilot Display Information,,pilot_display.htm,,,
+#**,Navigation Information
+#**,Status Indicators
+#***,DP Status Indicator
+#***,Position Status Indicator
+#***,Joystick Indicator
+#***,Navigation Status Indicator
+#***,DVL Lock Indicator
+#***,Emergency Stop Indicator
+#**,Flight Modes
+#***,HOVER Command
+#***,MANUAL Mode
+#***,AUTOHOVER Mode
+#***,AUTOFLY Mode
+#***,CRUISE Mode
+#**,Velocity Controls
+#**,Alarm Panel
+#**,Sonar RAnge Sliders
+*,Additional Interface Functions,,interface_functions.htm,,,
+#**,Chart Loading
+#**,Taking a Screenshot
+#**,Log Recording
+#**,External Position Fix
+#**,Clearing Breadcrumb Trail
+#**,Preferences
+#***,Units
+#***,Joystick Calibration
+#***,Features
+#***,Vehicle
+#**,Reset Sonar Comms
+#**,Auto Intensity On/Off
+#**,ColorMap
+#**,Intesity/Threshold
+*,Markers,,markers.htm,,,
+#**,Placing a Marker at the Current Position
+#**,Manually Placing a Marker
+#**,Fly to Marker
+#**,Save Marker Positions
+#**,Load a Marker File
+#**,Editing Markers
+#**,Deleting a Marker
+#***,Selecting Multiple Markers for Deletion
+
