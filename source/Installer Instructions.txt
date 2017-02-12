@@ -1,0 +1,88 @@
+NOTE:
+A) Copilot setup currently REQUIRES that the logged in (and thus installing) user be named VideoRay.  This is standard on VideoRay provisioned produciton machines.
+
+B) This setup also requires systems using a ROV GPS Mast and DVL to have the device PAMS programmed with the standard ID's.  This may NOT be the case for some device.  In which case they will HAVE to be reprogrammed with vrDeviceConf.  Please contact Andy or Marcus for assistance.
+
+
+
+INSTRUCTIONS:
+1)	Download everything to some temp directory on target machine. (I use C:\INSTALL)
+2)	Run the Setup_vrCockpit_3_0_99 to upgrade cockpit, just press ok/next for every dialog window
+3)	Run the VMware-player-4.0.5-893925 to install vmware player  (This is only neccessary if you do not have it installed, if you do you can press REPAIR without harming anything)
+3.1) 		Press NEXT
+3.2) 		Press NEXT 
+3.3) 		Uncheck "Check for product Updates..." 
+3.4) 		Press NEXT U
+3.5)		Uncheck "Help Improve VMware Player"
+3.6) 	        Press NEXT
+3.7)		Uncheck "Desktop"
+3.8)		Uncheck "Start Menu Programs Folder"
+3.9)		Press NEXT
+3.10) 		Press Continue
+3.11)		Wait will VMPlay installs
+3.12)		Press Restart Now, wait for the reboot and login
+4)		Run the VVM-CoPilot-AllVersions-17-05-2013.exe self extracting Virtual machine. (Press RUN if asked)
+4.1) 			Wait, then press OK when prompted.
+5)	Run the Setup_CoPilot, just press ok/next for every dialog window
+6) 	You will need to configure the vmware netowork
+6.1)		Set the Local Area Connection to 192.168.1.3 (netmask 255.255.255.0)
+6.1.1.1)			Go to Control Panel from the windows start menu
+6.1.1.2)			Press Network and Sharing Center
+6.1.1.3)			Click "Change Adatper Settings" which is on the left pane
+6.1.1.4)			Double click on Local Area Connection Properties
+6.1.3)			In the properties windows scroll down to and high light Internet Protocol Version 4... Press Properties
+6.1.4)			Select the "Use the following IP adress" radio button
+6.1.5)			Enter 192.168.1.3 in the IP address box
+6.1.6)			Enter 255.255.255.0 in the Subnet mask box.
+6.1.7)			Press OK to dismiss the Internet protocol properties dialog
+6.1.8) 			Press Close to dismiss the local area network properites window
+6.1.9)			Close the Network connections explorer window
+6.2)		Confiure the VM networking (see VR-MAN-001-CoPilotInstallGuide.doc for reference)
+6.2.1)			Open a windows explorer, go to “C:\Program Files (x86)\VMware\VMware Player” 
+6.2.2)			Copy the Virtual Network Editor executable “vmnetcfg” from the temp install directory (from step 1) into the VMware Player folder (from step 6.1)
+6.2.3)			Run vmnetcfg from the “C:\Program Files (x86)\VMware\VMware Player” directory
+6.2.4)			Highlight VMnet8 in the white listbox at the top of the window
+6.2.5)			MAke sure "Select the NAT (shared hosts's IP address with VMs)" radio button is selected
+6.2.6)			Make sure that "Connect a host virtual adapter to this netowrk" is checked.
+6.2.7)			Make sure that the "Use Loocal DHCP service to distribute IP address to VMs" is checked.
+6.2.8)			Make sure that Subnet IP is set to 192.168.107.0
+6.2.9)			Make sure that Subnet mask is set to 255.255.255.0
+6.2.10)			Press the NAT settings button
+6.2.11)			In the NAT Settings dialog which pops up:
+6.2.11.1)			Set "Gateway IP" to 192.168.107.2
+6.2.11.2)			Make sure "Allow Active FTP" is checked
+6.2.11.3)			Make sure "Allow any Organizationally Unique Identifier" is checked
+6.2.11.4)			Set "UDP Timeout (in seconds)" to 30
+6.2.11.5)			Press OK
+6.2.12)			Press the DHCP settings button
+6.2.13)			In the DHCP settings dialog which pops up:
+6.2.13.1)			Set "Start Address" to 192.168.107.128
+6.2.13.2)			Set "End Address" to 192.168.107.254
+6.2.13.2)			Set "Default lease time" to 0 days, 0 hours, 30 minutes
+6.2.13.3)			Set "Max lease time" to 0 days, 2 hours, 0 minutes
+6.2.13.4)			Press OK
+6.2.14)			Press OK on the "Virtual Netowrk Editor" to close the program
+7) 	Start Cockpit (ROV does NOT need to be connected)
+8) 	Press the CoPilot button in the Cockpit Launch Bar (light blue bar at the bottom of the screen.
+9)	Pess "Yes, I accept the terms..." in vmplayer dialog which pops up.
+10) 	Wait for VM to start...
+11) 	Select “I COPIED IT” when prompted in the VM
+12)	If the warning "A USB Device that was previously..." pops up just press OK to dismiss.  BE CAREFUL this may pop up behind the Virtual machine window.  If the virtual machine is taking a long time to boot, try closing the VM to see if this is the case.
+13)	If a software update screen pops up you can press Download and Install.  You should wait for the install to complete, once finished press the 
+	Close button.  The update requires that the machine be connected to the internet.
+14)	Make sure the Seebyte HASP usb dongle key is inserted.
+15) 	In the blue Virtual Machine menu bar at the top of the screen select Virtual Machine\Removable Devices\aladdin knowledge hasp...\connect 	
+	(disconnect from host)
+	(NOTE: you may have to do this if you move the hasp key to a different USB port)
+16) 	Insure that the top monitor is set to 1280x1024.
+16.1)	 	Right click on the desktop, select Screen Resolution in the pop-up menu, if neccessary change the top monitor to 1280x1024
+17)	Move the VM to the top monitor and full screen it.
+18) If the end-user is NOT getting the full software set then certain versions need to be removed:
+18.1)  	Double-Click on the Remove-Version icon.
+18.2)	Press the number which corresponds to the version you wish to REMOVE
+18.3) 	Press y to confirm the removal
+18.4) 	Press y to exit the removal tool.
+18.5)	Repeat 18.1 to 18.4 for each additional version to remove
+18.6)	Right click on the Remove-Version icon
+18.7) 	Select "Move to Rubbish Bin" to delete the icon
+19)     Copilot should be operational now.  Feel free to delete the temp install directory that was created in step 1.

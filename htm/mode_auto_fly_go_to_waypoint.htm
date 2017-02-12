@@ -1,0 +1,34 @@
+<h1>AUTO FLY - Go to Waypoint</h1>
+
+<p><img src="../../copilot_ri/images/flight_control_auto_fly.png"> &nbsp; <img src="../../copilot_ri/images/flight_control_go_to_waypoint.png"></p>
+
+<p>In AUTOFLY Go to Waypoint mode, CoPilot will attempt to control the ROV's motion according to keyed in values entered by the operator.  Once the objective location is entered, CoPilot will navigate the ROV to that location at the speed specified by the Velocity Controls selection.</p>
+
+<p>There are three types of Waypoints:</p>
+
+<ol>
+  <li>Global Position - GPS coordinates and depth (or altitude)
+    <p><img src="../../copilot_ri/images/Figure 23 Waypoint Navigation (1).png"></p></li>
+  <li>Local Position - Coordinates entered and depth (or altitude) in a local reference frame
+    <p><img src="../../copilot_ri/images/Figure 23 Waypoint Navigation (2).png"></p></li>
+  <li>Relative Position - Distances measured from the current location of the ROV
+    <p><img src="../../copilot_ri/images/Figure 23 Waypoint Navigation (3).png"></p></li>
+  </ol>
+
+<p>Once the Waypoint is achieved, the "In Position" status indicator will turn green and CoPilot will attempt to control the ROV according to the setting of the Enable Station Keeping selection in User Preferences.</p>
+
+<ul>
+  <li>With Enable Station Keeping selected, CoPilot will attempt to keep the ROV within a set tolerance centered about the current location, but NOT necessarily attempt to maintain the ROV's heading.<p></p></li>
+
+ <li>With Enable Station Keeping NOT selected, CoPilot will attempt to maintain the ROV's heading, but will NOT necessarily attempt to keep the ROV within the tolerance box.  CoPilot will also attempt to prevent the ROV from moving forward or backward, but NOT prevent it from drifting laterally.<p></p></li>
+  </ul>
+
+<p>The user cannot use the joystick to override Auto Fly Go to Waypoint mode for horizontal or vertical control of the ROV.</p>
+
+<p>To stop the ROV while under CoPilot control, press the Stay command button.  Pressing the Stay command will cause the system to enter Auto Fly mode.</p>
+
+<p>To exit Auto Fly Go to Waypoint mode, select another Auto Fly mode or Manual mode.</p>
+
+<p><img src="../../required/images/icon_note.png"> When using the joystick to override Auto Fly mode, the ROV's maximum speed is still restricted by the speed selection.  If you want full power, you will need to change to Manual mode.<p>
+
+<p><img src="../../required/images/icon_note.png"> If the system loses DP while in an Auto Fly mode, Auto Fly mode will be canceled and manual control mode will be entered.</p> 

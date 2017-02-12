@@ -1,0 +1,84 @@
+<h1>Status Indicators and Alarms</h1>
+
+<p>Status indicators and alarms provide the operator with feedback on the system's status and operational state.  In general, status indicators provide operational feedback, and alarms indicate a hardware problem.
+
+<p>The following status indicators are provided:</p> 
+
+<ul>
+  <li>DP Status
+    <ul>
+      <li>Red Standby - The system does not have a DVL lock and is unable to navigate the ROV.</li>
+      <li>Green DP - The system is able to navigate the ROV.</li>
+      </ul>
+    </li>
+  </ul>
+
+<ul>
+  <li>Navigation
+    <ul>
+      <li>Green Nav Global - The navigation reference frame is in global coordinates and based on either GPS or DVL tracking.</li>
+      <li>Yellow Nav Local - The navigation reference frame is in local coordinates and based on DVL tracking.</li>
+      <li>Red Nav Fault - The navigation system is unable to track the position of the ROV.</li>
+      </ul>
+    </li>
+  </ul>
+
+<ul>
+  <li>In Position
+    <ul>
+      <li>Gray In Position - The ROV is either in Manual mode or has not reached its objective location when it is in an auto flight mode.</li>
+      <li>Green In Position- The ROV has reached its objective location.</li>
+      </ul>
+    </li>
+  </ul>
+
+<ul>
+  <li>Joystick
+    <ul>
+      <li>Gray Joystick - There is no joystick input.</li>
+      <li>Gray Joystick - There is joystick input.</li>
+      </ul>
+    </li>
+  </ul>
+
+<ul>
+  <li>DVL Lock
+    <ul>
+      <li>Red DLV Lock - The DVL is not able to track the ROV's location.</li>
+      <li>Green DLV Lock - The DVL is tracking the ROV's location.</li>
+      </ul>
+    </li>
+  </ul>
+
+<ul>
+  <li>Sonar
+    <ul>
+      <li>Red Sonar - Sonar data is not being received or the sonar has been turned off.</li>
+      <li>Green Sonar - Sonar data is being received.</li>
+      </ul>
+    </li>
+  </ul>
+	
+<ul>
+  <li>GPS
+    <ul>
+      <li>Red GPS - GPS data is not being received or the GPS has been turned off.</li>
+      <li>Grey GPS - GPS data is being received but it is of low quality.</li>
+      <li>Green Sonar - GPS data is being received and is of good quality.</li>
+      </ul>
+    </li>
+  </ul>
+
+<p>The following Alarms are illuminated when the corresponding device or system is not working properly:</p>
+
+<ul>
+  <li>AutoPos - The system has encountered an internal error.</li>
+  <li>Depth - The ROV's depth is not detected.</li>
+  <li>DVL - The DVL is not detected.</li>
+  <li>GPS - The GPS is not detected.</li>
+  <li>Gyro - The ROV's gyros are not detected.</li>
+  <li>I/O - An internal system error has occurred.</li>
+  <li>Navigation - The system is unable to Navigate.</li>
+  <li>Sonar - The sonar is not detected.</li>
+  <li>USP - An internal network communications error has occurred.</li>
+  </ul>

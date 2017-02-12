@@ -1,0 +1,31 @@
+<h1>AUTO FLY - Click and Go</h1>
+
+<p><img src="../../copilot_ri/images/flight_control_auto_fly.png"> &nbsp; <img src="../../copilot_ri/images/flight_control_click_and_go.png"></p>
+
+<p>In AUTO FLY Click and Go mode, CoPilot will attempt to control the ROV's motion according to mouse inputs in the Navigation Chart area. A left-button mouse click changes the objective location for the ROV to the coordinates where the click occurred, and CoPilot will navigate the ROV to that location at the speed specified by the Velocity Controls selection.  A right-button mouse click in the Navigation Chart area will cause CoPilot to change the ROV's heading to the bearing from its current position to where the click occurred.</p>
+
+<p>The ROV's depth (or altitude) can be controlled by a mouse click in the Water Column display area.</p>
+
+<p>When AUTO FLY Click and Go is initiated, the ROV's objective location, heading and depth (or altitude) are initially defined as its current location.</p>
+
+<p>When an objective location has been defined be a left mouse click, it is represented by a red cross.  A red line is displayed from the point at which Click and Go was activated to the objective location.  A green trajectory line is drawn between the current ROV position and the objective location and this line is updated as the ROV approaches the objective location.</p> 
+
+<p>When an objective heading has been defined be a right mouse click, it is displayed by a yellow line of fixed length from the current ROV position and oriented at the requested objective heading. The objective heading is also displayed as a number at the end of the objective heading line.</p>
+
+<p>Once the objective location or heading is achieved, the "In Position" status indicator will turn green and CoPilot will attempt to control the ROV according to the setting of the Enable Station Keeping selection in User Preferences.</p>
+
+<ul>
+  <li>With Enable Station Keeping selected, CoPilot will attempt to keep the ROV within a set tolerance centered about the current location, but NOT necessarily attempt to maintain the ROV's heading.<p></p></li>
+
+ <li>With Enable Station Keeping NOT selected, CoPilot will attempt to maintain the ROV's heading, but will NOT necessarily attempt to keep the ROV within the tolerance box.  CoPilot will also attempt to prevent the ROV from moving forward or backward, but NOT prevent it from drifting laterally.<p></p></li>
+  </ul>
+
+<p>The user can use the joystick to override AUTO FLY Click and Go mode for horizontal control of the ROV.  Depth cannot be overridden.  If manual override is performed, the objective location will become to location of the ROV when the pilot releases the joystick.</p>
+
+<p>To stop the ROV while under CoPilot control, press the Stay command button.  Pressing the Stay command will cause the system to enter Auto Fly mode.</p>
+
+<p>To exit Auto Fly Click and Go mode, select another Auto Fly mode or Manual mode.</p>
+
+<p><img src="../../required/images/icon_note.png"> When using the joystick to override Auto Fly mode, the ROV's maximum speed is still restricted by the speed selection.  If you want full power, you will need to change to Manual mode.<p>
+
+<p><img src="../../required/images/icon_note.png"> If the system loses DP while in an Auto Fly mode, Auto Fly mode will be canceled and manual control mode will be entered.</p> 

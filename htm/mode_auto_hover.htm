@@ -1,2 +1,23 @@
 <h1>AUTO HOVER Mode</h1>
 
+<p><img src="../../copilot_ri/images/flight_control_auto_hover.png"></p>
+
+<p>In Auto Hover mode, CoPilot will attempt to maintain the ROV's current position, depth (or altitude) and heading within a set tolerance about its current position.</p>
+
+<p>The user can use the joystick to override Auto Hover mode for horizontal and/or vertical control of the ROV.</p>
+
+<p>If there are no joystick navigation control inputs, the "In Position" status indicator will turn green and CoPilot will attempt to control the ROV according to the setting of the Enable Station Keeping selection in User Preferences.</p>
+
+<ul>
+  <li>With Enable Station Keeping selected, CoPilot will attempt to keep the ROV within a set tolerance centered about the current location, but NOT necessarily attempt to maintain the ROV's heading.<p></p></li>
+
+ <li>With Enable Station Keeping NOT selected, CoPilot will attempt to maintain the ROV's heading, but will NOT necessarily attempt to keep the ROV within the set tolerance.  CoPilot will also attempt to prevent the ROV from moving forward or backward, but NOT prevent it from drifting laterally.<p></p></li>
+  </ul>
+
+<p>To exit Auto Hover mode, select another Auto Fly Mode, Manual mode, or press the Stay command.  Pressing the Stay command will cause the system to enter Auto Fly mode.</p>
+
+<p><img src="../../required/images/icon_note.png"> If you manually override Auto Hover by using the joystick, all aspects of Auto Hover are disabled.  This means that if you pilot the ROV to a new location, the depth (or altitude) will not be maintained, and must be manually controlled as well.  Conversely, if you change the ROV's depth (or altitude), the ROV may drift from its current horizontal location.</p> 
+
+<p><img src="../../required/images/icon_note.png"> When using the joystick to override Auto Hover mode, the ROV's maximum speed is still restricted by the speed selection.  If you want full power, you will need to change to Manual mode.<p>
+
+<p><img src="../../required/images/icon_note.png"> If the system loses DP while in Auto Hover mode, Auto Hover mode will be canceled and manual control mode will be entered.</p>

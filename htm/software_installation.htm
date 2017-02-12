@@ -1,2 +1,108 @@
 <h1>Software Installation</h1>
 
+<p><img src="../../required/images/icon_caution.png"> Installation of VideoRay CoPilot RI is a complex process.  Improper installation can result in an unstable computer.  If you do have an intermediate or better understanding of installing and configuring software, contact VideoRay Technical Support for assistance.</p>
+
+<p><img src="../../required/images/icon_note.png"> CoPilot setup currently REQUIRES that the logged in (and thus installing) user be named VideoRay.  This is standard on VideoRay provisioned production machines.</p>
+
+<p><img src="../../required/images/icon_note.png"> This setup also requires systems using a ROV GPS Mast and DVL to have the device PAMS programmed with the standard ID's.  This may NOT be the case for some devices.  In which case they will HAVE to be reprogrammed with vrDeviceConf.  Please contact VideoRay Technical Support for assistance if necessary.</p>
+
+<h2>Step-by-step Instructions</h2>
+<ol>
+  <li>Download the installation set to a temp folder on the target machine.</li>
+  <li>Install VideoRay Cockpit</li>
+  <li>Run the VMware-player-4.0.5-893925 to install VMware player. (This is only necessary if you do not have it installed, if you do you can press REPAIR without harming anything)
+    <ol type="a">
+      <li>Press NEXT</li>
+      <li>Press NEXT</li>
+      <li>Uncheck "Check for product Updates..." </li>
+      <li>Press NEXT</li>
+      <li>Uncheck "Help Improve VMware Player"</li>
+      <li>Press NEXT</li>
+      <li>Uncheck "Desktop"</li>
+      <li>Uncheck "Start Menu Programs Folder"</li>
+      <li>Press NEXT</li>
+      <li>Press Continue</li>
+      <li>Press Restart Now; wait for the reboot and login</li>
+      </ol>
+    </li>
+  <li>Run the VM-CoPilot-AllVersions_<i>xx_xx_xx</i>.exe self extracting Virtual Machine (Press RUN if asked)
+    <ol type="a">
+      <li>Wait, then press OK when prompted.</li>
+      </ol>
+    </li>
+  <li>Run the Setup_CoPilot, just press OK/NEXT for every dialog window</li>
+  <li>Configure the VMware network
+    <ol type="a">
+      <li>Go to Control Panel from the Windows Start menu</li>
+      <li>Click on Network and Sharing Center</li>
+      <li>Click "Change Adapter Settings" which is on the left pane</li>
+      <li>Double click on Local Area Connection Properties</li>
+      <li>In the properties windows, click on Internet Protocol Version 4</li>
+      <li>Click on Properties</li>
+      <li>Select the "Use the following IP address" radio button</li>
+      <li>Enter 192.168.1.3 in the IP address box</li>
+      <li>Enter 255.255.255.0 in the Subnet mask box</li>
+      <li>Press OK to dismiss the Internet protocol properties dialog</li>
+      <li>Press Close to dismiss the local area network properties window</li>
+      <li>Close the Network connections window</li>
+      </ol>
+    </li>
+  <li>Configure the VM networking
+    <ol type="a">
+      <li>Open a Windows Explorer, navigate to <span class="folder">C:\Program Files (x86)\VMware\VMware Player</span></li>
+      <li>Copy the Virtual Network Editor executable vmnetcfg.exe from the temp install folder (from step 1) into the VMware Player folder</li>
+      <li>Run vmnetcfg.exe from the <span class="folder">C:\Program Files (x86)\VMware\VMware Player</span> folder</li>
+      <li>Highlight VMnet8 in the white list box at the top of the window</li>
+      <li>Make sure "Select the NAT (shared hosts IP address with VMs)" radio button is checked</li>
+      <li>Make sure that "Connect a host virtual adapter to this network" is checked</li>
+      <li>Make sure that the "Use Local DHCP service to distribute IP address to VMs" is checked</li>
+      <li>Make sure that Subnet IP is set to 192.168.107.0</li>
+      <li>Make sure that Subnet mask is set to 255.255.255.0</li>
+      <li>Press the NAT settings button; in the NAT Settings dialog which pops up:
+        <ol>
+          <li>Set "Gateway IP" to 192.168.107.2</li>
+          <li>Make sure "Allow Active FTP" is checked</li>
+          <li>Make sure "Allow any Organizationally Unique Identifier" is checked</li>
+          <li>Set "UDP Timeout (in seconds)" to 30</li>
+          <li>Press OK</li>
+          </ol>
+        </li>
+      <li>Press the DHCP settings button; in the DHCP settings dialog which pops up:
+        <ol>
+          <li>Set "Start Address" to 192.168.107.128</li>
+          <li>Set "End Address" to 192.168.107.254</li>
+          <li>Set "Default lease time" to 0 days, 0 hours, 30 minutes</li>
+          <li>Set "Max lease time" to 0 days, 2 hours, 0 minutes</li>
+          <li>Press OK
+          </ol>
+        </li>
+      <li>Press OK on the "Virtual Network Editor" to close the program</li>
+    </ol>
+  <li>Start Cockpit (The ROV does NOT need to be connected)</li>
+  <li>Press the CoPilot button in the Cockpit Control Bar</li>
+  <li>Press "Yes, I accept the terms..." in VMplayer dialog which pops up</li>
+  <li>Wait for the VM to start...</li>
+  <li>Select "I COPIED IT" when prompted in the VM</li>
+  <li>If the warning "A USB Device that was previously..." pops up just press OK to dismiss.  BE CAREFUL this may pop up behind the Virtual machine window.  If the virtual machine is taking a long time to boot, try closing the VM to see if this is the case.</li>
+  <li>If a software update screen pops up you can press Download and Install.  You should wait for the install to complete, once finished press the Close button.  The update requires that the machine be connected to the internet.</li>
+  <li>Make sure the SeeByte HASP USB license key is inserted into a USB port.</li>
+  <li>In the blue Virtual Machine menu bar at the top of the screen select Virtual Machine\Removable Devices\Aladdin Knowledge Hasp...\connect (disconnect from host) NOTE: you may have to do this if you move the Hasp key to a different USB port)</li>
+  <li>Insure that the top monitor resolution is set to 1280x1024
+    <ol type="a">
+      <li>Right click on the Windows desktop, select Screen Resolution in the pop-up menu, if necessary change the top monitor resolution to 1280x1024</li>
+      </ol>
+    </li>
+  <li>Move the VM to the top monitor and set it to full screen</li>
+  <li>If the the full software suite is not licensed then certain versions need to be removed:
+    <ol type="a">
+      <li>Double-Click on the Remove-Version icon.</li>
+      <li>Press the number which corresponds to the version you wish to REMOVE</li>
+      <li>Press Y to confirm the removal</li>
+      <li>Press Y to exit the removal tool.</li>
+      <li>Repeat these steps for each additional version to remove</li>
+      <li>Right click on the Remove-Version icon</li>
+      <li>Select "Move to Rubbish Bin" to delete the icon</li>
+      </ol>
+    </li>
+  <li>Copilot should be operational now.  Feel free to delete the temp install folder that was created in step 1.</li>
+  </ol>

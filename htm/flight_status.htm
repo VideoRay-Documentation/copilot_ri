@@ -1,2 +1,24 @@
 <h1>Flight Status Panel</h1>
 
+<p>The Flight Status Panel is displayed in the upper left of the interface.  It provides real time information about the position and movement of the ROV.</p>
+
+<center>
+<p><img src="../../copilot_ri/images/Figure%204%20Navigation%20Information.png"></p>
+</center>
+
+<p>The flight status panel provides the user with the following ROV information: 
+
+<ul>
+  <li><b>Lat</b> - ROV Latitude</li>
+  <li><b>Lon</b> - ROV Longitude</li>
+  <li><b>H</b> - ROV Heading</li>
+  <li><b>D</b> - ROV Depth</li>
+  <li><b>A</b> - ROV Altitude</li>
+  <li><b>N</b> - ROV Northing (local coordinate system)</li>
+  <li><b>E</b> - ROV Easting (local coordinate system)</li>
+  <li><b>Xv</b> - ROV Horizontal Velocity (+ is forward)</li>
+  <li><b>Zv</b> - ROV Vertical Velocity (+ is diving)</li>
+  <li><b>Hv</b> - ROV Rotational Velocity (+ is clockwise)</li>
+  </ul>
+
+<p>This information is normally updated from the navigation system, but if the DP is in standby only the raw ROV information is displayed. No values are displayed if no ROV information is detected.</p>

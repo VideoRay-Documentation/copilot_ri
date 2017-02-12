@@ -1,18 +1,30 @@
-<h1>5 - Water Column Display</h1>
+<h1>Water Column Display</h1>
 
-<p>The water column display allows the user to view the area above and below the ROV in the water column. The ROV remains in the center of the display at all times. If the seabed is within range of the DVL and is within the current field of view, it is also displayed.</p>
+<table class="transparent">
+  <tr>
+    <td class="cellBorderless">
+<p>The water column display is positioned on the right side of the interface.  It allows the user to visualize the depth and altitude above the seabed (if available) of the ROV in the water column.  The ROV remains in the center of the display at all times.  A left-button mouse click in this display generates a new depth/altitude request for the ROV. A right-button mouse click has no effect in this display.</p>
 
-<p>The water column display can be operated in either depth or altitude mode. This option allows the ROV to remain at a constant user-defined value. In depth mode, the ROV will maintain the specified depth of the ROV relative to the sea surface; in altitude mode, the ROV will maintain the specified altitude of the ROV relative to the sea bed. 
-The depth/altitude mode can be changed by clicking on the button at the top of the water column display. For example, if the button indicates that the display is in "Depth" mode, it will change to "Altitude" when selected.</p>
+<p>The water column display can be operated in either depth or altitude mode.  This option allows the ROV to remain at a constant user-defined value.  In depth mode, the ROV will maintain the specified depth of the ROV relative to the sea surface; in altitude mode, the ROV will maintain the specified altitude of the ROV relative to the sea bed.  The depth/altitude mode can be changed by clicking on the button at the top of the water column display. For example, if the button indicates that the display is in "Depth" mode, it will change to "Altitude" when selected.</p>
 
-<p>While in AUTOFLY or CRUISE mode, the user can control the ROV"s Z (Heave) axis by clicking above or below the center of the water column display. The ROV will then ascend or descend to the specified depth or altitude, depending on the selected display mode.</p>
+<p>While in AUTOFLY or CRUISE mode, the user can control the ROV's Z axis (Heave) by left clicking at the desired objective depth or altitude. The ROV will then ascend or descend to the specified depth or altitude, depending on the selected display mode.</p>
 
-<p>The seabed icon is displayed in yellow and the sea surface in cyan. The current depth/altitude is represented by an arrow the same color as the ROV and the target depth/altitude selected by the user is represented by an arrow the same color as the target waypoint in the navigation chart.</p>
+<p>The sea surface is displayed in cyan and the seabed icon in yellow. The current depth/altitude is represented by an arrow the same color as the ROV and the objective depth/altitude selected by the user is represented by an arrow the same color as the target waypoint in the navigation chart.</p>
 
-<center><p><img src="../images/Figure%203%20Water%20Column%20Display.png"></p>
-<p>Figure 3 - Water Column Display</p>
+<h2>Water Column Display Zoom Scale Control</h2>
+
+<p>The water column zoom scale allows the user to change the range of view above and below the ROV.  The ROV is always at the center of the water column display; the water surface and seabed are also displayed but move according to the current depth and altitude of the ROV. The zoom scale of the viewable area is measured from the center of view to the top or bottom of the viewable area. The scales are set to pre-defined values of 2m, 5m, 10m, 20m, 50m, 100m, 200m, 500m and 1000m (or their equivalent values in feet).</p>
+
+<center>
+<p><img src="../../copilot_ri/images/water_column_zoom.png"></p>
 </center>
 
-<h2>5.1 Water Column Display Zoom Scale Control</h2>
+      </td>
+    <td class="imageCellBorderless">
+<center>
+<p><img src="../../copilot_ri/images/Figure%203%20Water%20Column%20Display.png"></p>
+</center>
+      </td>
+    </tr>
+  </table>
 
-<p>The water column zoom scale allows the user to change the displayed size of the area of interest around the ROV. Zooming out in this control allows the user to send requests further above or below the ROV. The ROV is always at the center of the water column display; the seabed is also displayed but moves according to the current ROV altitude. The zoom scale of the viewable area is measured from the center of view to the top or bottom of the viewable area. The scales are set to pre-defined values of 2m, 5m, 10m, 20m, 50m, 100m, 200m, 500m and 1000m (or their equivalent values in feet).</p>

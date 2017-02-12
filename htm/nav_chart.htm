@@ -1,25 +1,41 @@
-<h1>4 - Navigation Chart Display</h1>
+<h1>Navigation Chart Display</h1>
 
-<p>The navigation chart display is centered on the ROV. It displays a plan view of the ROV and the surrounding area. 
-The ROV position is estimated by VideoRay RI CoPilot's navigation system - the accuracy of which depends on the frequency and quality of the absolute navigation fixes.</p>
+<p>The navigation chart display is the main panel in the pilot interface. It allows the user to monitor the position of the ROV in real-time. It is also possible to use the navigation chart display to generate pilot commands for the ROV by selecting coordinate locations with a mouse when in an Auto Fly mode. For example, when in AUTO FLY Click and Go mode, a left-button mouse click in this display generates a new position request for the ROV, and a right-button mouse click generates a new heading request. The background of the Navigation Chart Display can be either a grid or a chart.  A sonar image overlay can also be displayed for target recognition and location determination.</p>
 
-<p>The viewer is always pointing to magnetic north; however the ROV will rotate in the center of the screen to reflect the current ROV heading.</p>
+<p><img src="../../copilot_ri/images/nav_chart.png" width="660"></p>
 
-<p>When in <b>AUTOFLY</b> mode, the ROV is controlled in X (Surge), and Yaw (Heading) in the navigation chart display using the mouse. A left-button mouse click changes the current target position to the new screen coordinates where the click occurred. The target waypoint is represented by a cross and a trajectory line is drawn between the current ROV position and the target waypoint. A right-button mouse click changes heading. The target heading is displayed by a line of fixed length from the current ROV position at the requested target heading. The target heading is also displayed as a number at the end of the target heading line.</p>
+<p>The navigation chart displays a plan view of the ROV and the surrounding area.  The ROV position is calculated by VideoRay RI CoPilot's navigation system - the accuracy of which depends on the frequency and quality of the absolute navigation fixes.  The display is always centered on the ROV, so it will appear as if the grid or chart is moving under the ROV.</p>
 
-<p>The number of turns the ROV makes over its own axis is displayed on the left side of the navigation chart display. A clockwise turn is represented by a positive figure, and an anti-clockwise turn is represented by a negative figure. 
-The navigation chart also displays a grid as a form of reference. The grid square scale is specified by the grid size label.</p>
+<p>By default, magnetic north is up on the screen.  The ROV will rotate in the center of the screen to reflect the current ROV heading.  Other viewing modes are available, see the <a href="../../copilot_ri/html/operations_view.html">view orientation</a> section of the Operations Support Tools for more information.</p>
 
-<p>In addition to a grid, the navigation chart is also capable of displaying a user-defined water current velocity. The navigation chart display is also responsible for displaying the head-up display messages indicating various system states.</p>
+<p>The ROV is represented by a blue rectangle with a line projecting in the direction the ROV heading.  Other general interface elements include:</p>
 
-<h2>4.1 Navigation Chart Display Zoom Scale Control</h2>
+<ul>
+  <li>Red Dots - A breadcrumb trail of red dots indicating the path that the ROV has taken can be displayed.  
+  <li>Range and Bearing - The range and bearing from the ROV to the position indicated by the mouse can be displayed.</li>  
+  <li>Turns count - The number of turns the ROV makes over its own axis is displayed on the left side of the navigation chart display. A clockwise turn is represented by a positive value, and an counter-clockwise turn is represented by a negative value.</li>
+  </ul>
 
-<p>The navigation chart display zoom scale allows the user to change the displayed size of objects in the viewable area. The scale of the viewable area is measured from the center of view to the right or left edge of the viewable area. The scales are set to pre-defined values of 2m, up to 50,000m (or their equivalent values in feet).</p>
+<p>The navigation chart display is also responsible for displaying heads-up messages and auto flight indicators.  The auto flight indicators can help the operator understand what the system is doing.</p>
 
-Breadcrumb Trail
+<ul>
+  <li>"DP Standby" message - The system does not have sufficient sensor data for tracking and cannot initiate an auto flight mode.</li>
+  <li>"Offline" message - The offline planning mode is active.  The Offline planning mode allows surveys to be created and simulated.</li>
+  <li>Red Cross - The Objective Location, which indicates the location to which CoPilot will attempt to navigate the ROV while in an auto flight mode.</li>
+  <li>Yellow Line - The Objective Heading, which indicates the heading to which CoPilot will attempt to turn the ROV while in an auto flight mode.</li>
+  <li>Red Line - Connects the location of the ROV (at the moment when auto flight is initiated) with the Objective Location defined by the operator.</li>
+  <li>Green Line - Connects the current location of the ROV with the Objective Location when auto flight is in progress.  This line updates continuously until the Objective Location is reached.</li>
+  <li>In Position Tolerance Indicator (Nudge Box) - A gray box displayed around the ROV.  If the Objective Location is within this box, the ROV is considered In Position.  This box is only displayed when the mouse is hovered over the blue rectangle ROV indicator.</li>
+  <li>Blue Lines - Indicate a planned survey route.</li>
+  <li>Survey Waypoint Numbers - Indicate the sequence in which the survey waypoints will be visited.</li>
+  <li>Blue Dots - Markers.</li>
+  <li>Yellow Dot - Selected marker.</li>
+  </ul>
 
-Messages
+<h2>Navigation Chart Display Zoom Scale Control</h2>
 
-DP Standby
+<center>
+<p><img src="../../copilot_ri/images/nav_chart_zoom.png"></p>
+</center>
 
-Offline
+<p>The navigation chart display zoom scale allows the user to change the viewable area and displayed size of objects. The scale of the viewable area is measured from the center of the view to the right or left edge of the viewable area. The scales are set to pre-defined values of 2m, up to 50,000m (or their equivalent values in feet).</p>

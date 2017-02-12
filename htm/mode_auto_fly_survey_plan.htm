@@ -1,0 +1,41 @@
+<h1>AUTO FLY - Survey Plan</h1>
+
+<p><img src="../../copilot_ri/images/flight_control_auto_fly.png"> &nbsp; <img src="../../copilot_ri/images/flight_control_survey_plan.png"></p>
+
+<p>In AUTOFLY Survey Plan mode, CoPilot will attempt to control the ROV's motion according to a series of survey waypoints entered using mouse clicks or keyed into a table.  Once a survey is started, CoPilot will navigate the ROV through the series of survey waypoints at the speed specified by the Velocity Controls selection.</p>
+
+<p><img src="../../copilot_ri/images/Figure 21 Running a Survey.png"></p>
+
+<p>Survey controls include:
+
+<ul>
+  <li>Stop</li>
+  <li>Reverse</li>
+  <li>Play / Pause</li>
+  <li>Skip</li>
+  <li>Delete Survey</li>
+  <li>Load Survey</li>
+  <li>Save Survey</li>
+  <li>Edit Survey</li>
+  </ul>
+
+<p>Once a survey waypoint is achieved, the "In Position" status indicator will turn green and CoPilot will attempt to control the ROV according to the setting of the Enable Station Keeping selection in User Preferences.</p>
+
+<ul>
+  <li>With Enable Station Keeping selected, CoPilot will attempt to keep the ROV within a set tolerance centered about the current location, but NOT necessarily attempt to maintain the ROV's heading.<p></p></li>
+
+ <li>With Enable Station Keeping NOT selected, CoPilot will attempt to maintain the ROV's heading, but will NOT necessarily attempt to keep the ROV within the tolerance box.  CoPilot will also attempt to prevent the ROV from moving forward or backward, but NOT prevent it from drifting laterally.<p></p></li>
+  </ul>
+
+<p>The user cannot use the joystick to override Auto Fly Survey Plan mode for horizontal or vertical control of the ROV.</p>
+
+<p>To stop the ROV while under CoPilot control, press the Pause or Stop button in the survey controls panel or Stay command button in the Pilot Controls Panel.  Pressing the Stay command will cause the system to enter Auto Fly mode.</p>
+
+<p>To exit Auto Fly Survey Plan mode, select another Auto Fly mode or Manual mode.</p>
+
+<p><img src="../../required/images/icon_note.png"> When using the joystick to override Auto Fly mode, the ROV's maximum speed is still restricted by the speed selection.  If you want full power, you will need to change to Manual mode.<p>
+
+<p><img src="../../required/images/icon_note.png"> If the system loses DP while in an Auto Fly mode, Auto Fly mode will be canceled and manual control mode will be entered.</p>
+
+<p><img src="../../required/images/icon_tip.png"> Surveys can be planned and simulated in Offline Planning mode.</p>
+

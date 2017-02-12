@@ -1,0 +1,9 @@
+
+|DP|Dynamic Positioning - the state of CoPilot RI in which the system is controlling the motion of the ROV.|
+|DVL|Doppler Velocity Log - an acoustic sensor instrument that can be used to track vehicle speed and relative direction.|
+|Identify|The process of determining the identity, nature or significance of a target.|
+|Nudge Box|A tolerance indicator on the screen that represents the area of proximity around the ROV.  If the objective location is within this nudge box, the ROV is considered in-position.|
+|Objective Location|The desired location to which the ROV is being guided manually or automatically.|
+|Reacquire|The process of sending the ROV to the location of a target, marker or point of interest.|
+|Target|A sonar return that represents a known or potential object of interest.|
+|Virtual Machine|An alternate operating environment other than the native operating system on an computer.|
